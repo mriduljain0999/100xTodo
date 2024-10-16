@@ -26,6 +26,7 @@ app.options('*', (req, res) => {
 app.use(express.json());
 
 app.get("/",function(req,res){
+    console.log("hello")
     res.json("Hello");
 })
 
