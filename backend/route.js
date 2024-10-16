@@ -9,17 +9,18 @@ const {UserModel , TodoModel} = require('./db');
 const app = express();
 
 mongoose.connect("mongodb+srv://mriduljain012:ahnw9kt8H5@cluster0.th8on.mongodb.net/100xTodo")
-app.options('*', (req, res) => {
-    res.header('Access-Control-Allow-Origin', 'https://100x-todo-frontend.vercel.app');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.sendStatus(204); // No content
-});
+
 app.use(cors({
     origin: "https://100x-todo-frontend.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true, // Allow credentials (cookies, authorization headers, etc.)
 }));
+
+app.options('*', (req, res) => {
+  res.header('Access-Control-Allow-Origin', 'https://100x-todo-frontend.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.sendStatus(204);
+});
 
 app.use(express.json());
 
