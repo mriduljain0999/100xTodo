@@ -10,13 +10,12 @@ const app = express();
 
 mongoose.connect("mongodb+srv://mriduljain012:ahnw9kt8H5@cluster0.th8on.mongodb.net/100xTodo")
 
-app.use(cors(
-    {
-        origin: ["https://100x-todo-frontend.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+app.use(cors({
+    origin: "https://100x-todo-frontend.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+}));
+
 app.use(express.json());
 
 app.post("/signup",async function(req,res){
