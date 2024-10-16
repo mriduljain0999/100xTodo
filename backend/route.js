@@ -18,6 +18,10 @@ app.use(cors({
 
 app.use(express.json());
 
+app.get("/",function(req,res){
+    res.json("Hello");
+})
+
 app.post("/signup",async function(req,res){
     try{
         const reqBody = z.object({
