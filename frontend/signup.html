@@ -25,7 +25,7 @@
                     password:document.querySelector(".signup-password").value,
                 }
                 try{
-                    const response = await axios.post("http://localhost:3000/signup",userData);
+                    const response = await axios.post("https://100-x-todo.vercel.app/signup",userData);
                     alert(response.data);
                     if(response.data == "Signed up sucessfully!"){
                         window.location.href = "signin.html"
