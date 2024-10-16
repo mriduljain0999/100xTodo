@@ -12,7 +12,7 @@ mongoose.connect("mongodb+srv://mriduljain012:ahnw9kt8H5@cluster0.th8on.mongodb.
 
 app.use(cors(
     {
-        origin: ["https://deploy-mern-frontend.vercel.app"],
+        origin: [""],
         methods: ["POST", "GET"],
         credentials: true
     }
