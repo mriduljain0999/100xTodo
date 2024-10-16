@@ -12,7 +12,7 @@ mongoose.connect("mongodb+srv://mriduljain012:ahnw9kt8H5@cluster0.th8on.mongodb.
 
 app.use(cors(
     {
-        origin: ["https://100x-todo-frontend.vercel.app/"],
+        origin: ["https://100x-todo-frontend.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
