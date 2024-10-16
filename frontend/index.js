@@ -26,7 +26,7 @@ dashGreet();
 async function addTodo(){
     try{
         const todo = document.querySelector("input").value;
-        const response = await axios.post("http://localhost:3000/add-todo",{
+        const response = await axios.post("https://100-x-todo.vercel.app/add-todo",{
             desc:todo,
             status:false
         },{
@@ -43,12 +43,12 @@ async function addTodo(){
 
 async function fetch(){
     try{
-        const todos = await axios.get("http://localhost:3000/get-todos",{
+        const todos = await axios.get("https://100-x-todo.vercel.app/get-todos",{
             headers: {
                 token: localStorage.getItem('token')
             }
         });
-        const username = await axios.get("http://localhost:3000/username",{
+        const username = await axios.get("https://100-x-todo.vercel.app/username",{
             headers: {
                 token: localStorage.getItem('token')
             }
@@ -104,7 +104,7 @@ async function deleteTodo(e,todo){
     try{
         const todo = e.target.parentNode.parentNode.children[0].children[1].textContent;
         // console.log(e.target.parentNode.parentNode.children[0].children[1].textContent);
-        const response = await axios.delete('http://localhost:3000/delete', {
+        const response = await axios.delete('https://100-x-todo.vercel.app/delete', {
             headers: {
                 token: localStorage.getItem('token')
             },
@@ -124,7 +124,7 @@ function attachCheckboxListeners(){
         checkbox.addEventListener("input",async function(){
             const todo = checkbox.parentElement.children[1].innerHTML
             try {
-                await axios.put('http://localhost:3000/update-status', {
+                await axios.put('https://100-x-todo.vercel.app/update-status', {
                     desc: todo,
                     status: checkbox.checked
                 }, {
