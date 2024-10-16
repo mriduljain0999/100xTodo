@@ -10,7 +10,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/route.js" // Adjust if your main file is different
+      "dest": "/route.js"
     }
   ]
 }
