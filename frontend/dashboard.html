@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>100xTodo - Dashboard</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="utility.css">
+        <link rel="stylesheet" href="dashboard.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="auth-container">
+            <div class="dash-header">
+                <div class="greet">
+                    <p class="dash-greet dash-name"></p>
+                    <p class="username dash-name"></p>
+                </div>
+                <button class="util-button" onclick="logout()">Log out</button>
+            </div>
+            <div class="dash-body">
+                <div class="addtodo">
+                    <h2>Tasks list</h2>
+                    <div class="todoToAdd">
+                        <input class="inp" type="text" placeholder="Todo description">
+                        <button class="util-button" onclick="addTodo()">Add Todo</button>
+                    </div>
+                </div>
+                <div class="todos"></div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

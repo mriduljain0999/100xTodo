@@ -1,0 +1,18 @@
+.auth-img{
+    width: 300px;
+}
+.auth-container{
+    justify-content: center;
+    gap: 18px;
+}
+input{
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-weight: 600;
+}
+.util-button{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}

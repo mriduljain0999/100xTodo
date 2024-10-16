@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>100xTodo - Signin</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="utility.css">
+        <link rel="stylesheet" href="signin.css">
+    </head>
+    <body>
+        <div class="auth-container">
+            <img class="auth-img" src="mainImage.png">
+            <h3 class="util-small-heading">Welcome back to</h3>
+            <h1 class="util-heading">OUR 100XTODO</h1>
+            <input type="email" class="signin-email" placeholder="Enter your email">
+            <input type="password" class="signin-password" placeholder="Enter your password">
+            <button class="util-button">Sign in</button>
+            <h5 class="util-small-heading">Don't have an account ? <a href="signup.html">Sign up</a></h5>
+        </div>
+
+        <script>
+            document.querySelector(".util-button").addEventListener("click",async function(){
+            const userData = {
+                email:document.querySelector(".signin-email").value,
+                password:document.querySelector(".signin-password").value,
+            }
+            
+            try{
+                const response = await axios.post("http://localhost:3000/signin",userData);
+                if(response.data.status){
+                    localStorage.setItem("token",response.data.token);
+                    window.location.href = "dashboard.html"
+                }
+
+            }catch(e){alert("Bad credentials!")}
+            
+        })
+        </script>
+    </body>
+</html>

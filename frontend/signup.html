@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>100xTodo - Signup</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="utility.css">
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+        <div class="auth-container">
+            <img class="auth-img" src="mainImage.png">
+            <h1 class="util-heading">Get things done with 100xTodo</h1>
+            <p class="small-para">Let's help you meet your tasks</p>
+            <input type="text" class="signup-name"  placeholder="Enter your full name" required>
+            <input type="email" class="signup-email" placeholder="Enter your email" required>
+            <input type="password" class="signup-password" placeholder="Enter your password" required>
+            <button class="util-button">Register</button>
+            <h5 class="util-small-heading">Already have an account ? <a href="signin.html">Sign in</a></h5>
+        </div>
+
+        <script>
+            document.querySelector(".util-button").addEventListener("click",async function(){
+                const userData = {
+                    name:document.querySelector(".signup-name").value,
+                    email:document.querySelector(".signup-email").value,
+                    password:document.querySelector(".signup-password").value,
+                }
+                try{
+                    const response = await axios.post("http://localhost:3000/signup",userData);
+                    alert(response.data);
+                    if(response.data == "Signed up sucessfully!"){
+                        window.location.href = "signin.html"
+                    }
+                }
+                catch(e){
+                    alert('Error while signing up!')
+                }
+            })
+        </script>
+    </body>
+</html>

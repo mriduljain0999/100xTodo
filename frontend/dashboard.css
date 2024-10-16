@@ -1,0 +1,87 @@
+.auth-container{
+    background-color: white;
+    gap: 50px;
+}
+.dash-header{
+    background-color: #F7D6A9;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.inp{
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 10px 30px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    height: 40px;
+}
+.util-button{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+}
+.greet{
+    display: flex;
+    gap: 5px;
+}
+.dash-name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.username::first-letter{
+    text-transform: uppercase;
+}
+.dash-body{
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    /* background-color: navajowhite; */
+}
+.addtodo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.todoToAdd{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.todos{
+    width: 80%;
+    height: 40vh;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    align-self: flex-start;
+    overflow-y: scroll;
+}
+.delete{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.choDiv{
+    display: flex;
+    gap: 30px;
+}
+.todoDiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
